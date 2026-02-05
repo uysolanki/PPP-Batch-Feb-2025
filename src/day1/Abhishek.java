@@ -6,7 +6,7 @@ public class Abhishek extends Amitabh
 	public String qualification = "BCOM";
 	
 	@Override
-	public void home()
+	void home()
 	{
 			System.out.println("New Jalsa");
 	}
@@ -15,5 +15,11 @@ public class Abhishek extends Amitabh
 	{
 			System.out.println("Audi");
 	}
+	
+	
+//	public void gold()
+//	{
+//		System.out.println("New Gold Jewelry");
+//	}
 	
 }

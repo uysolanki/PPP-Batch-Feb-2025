@@ -4,9 +4,14 @@ public class Amitabh {
 	
 	public String qualification = "MCOM";
 	
-	public void home()
+	void home()
 	{
 		System.out.println("Jalsa");
+	}
+
+	public final void gold()
+	{
+		System.out.println("Family Gold");
 	}
 
 }
