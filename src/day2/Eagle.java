@@ -10,6 +10,9 @@ public class Eagle implements RunningBird,FlyingBird
 
 	@Override
 	public void method1() {
-		FlyingBird.super.method1();
+		//RunningBird.super.method1();
+		System.out.println("My own implementation");
 	}
+	
+	
 }
