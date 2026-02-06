@@ -34,7 +34,7 @@ public class DriverApp {
 		a3.office();			//Bandra Office
 		
 		
-		//Abhishek a4=(Abhishek) new Amitabh();
+		Abhishek a4=(Abhishek) new Amitabh();
 		
 //		int sellingPrice=8;
 //		double printSellingPrice=sellingPrice;			//widning  implicilty type conversion

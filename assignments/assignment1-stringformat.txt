@@ -1,0 +1,5 @@
+Date         Description          Debit          Credit         Balance
+------------------------------------------------------------------------
+06-02-2026   ATM Withdrawal       2000.00        				18000.00
+07-02-2026   Salary Credit                       25000.00       43000.00
+08-02-2026   Online Shopping      3500.00                       39500.00
