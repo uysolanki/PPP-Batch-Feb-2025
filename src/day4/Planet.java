@@ -15,6 +15,7 @@ public enum Planet {
 	double mass;
 	double diameter;
 	
+	private Planet() {}
 	private Planet(double m,double d)
 	{
 		this.mass=m;
