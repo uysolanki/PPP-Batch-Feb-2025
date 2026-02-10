@@ -2,7 +2,7 @@ package day4;
 
 public enum Errors {
 	
-	ERR1("ERR1","Invalid Username"),
+	ERR1("ERR1","%s is a Invalid Username"),
 	ERR2("ERR2","Invalid Password");
 	
 	private String error_id;

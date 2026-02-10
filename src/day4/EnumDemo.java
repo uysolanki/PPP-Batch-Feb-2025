@@ -25,7 +25,7 @@ public class EnumDemo {
 		if(username.length()<3)
 		{
 			error=Errors.ERR1;
-			System.out.println(error.getError_message());
+			System.out.println(String.format(error.getError_message(), username));
 			return;
 		}
 		
