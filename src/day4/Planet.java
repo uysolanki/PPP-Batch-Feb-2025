@@ -2,7 +2,7 @@ package day4;
 
 public enum Planet {
 
-	MERCURY(100.0,9.0),
+	MERCURY(),
 	VENUS(200.0,10.0),
 	EARTH(300.0,11.0),
 	MARS(400.0,12.0),
