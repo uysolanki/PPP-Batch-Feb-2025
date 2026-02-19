@@ -1,0 +1,29 @@
+package day8;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class ExceptionDelegationDemo4 {
+
+	public static void main(String[] args) throws IOException
+	{
+		
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter Numerator");
+		int num=sc.nextInt();
+		System.out.println("Enter Denominator");
+		int den=sc.nextInt();	
+		
+		double ans=divide(num,den);
+		System.out.println("Result is "+ans);
+		
+		
+	}
+
+	private static double divide(int num,int den)  throws IOException
+	{							
+		return num/den;								
+	}
+
+}
