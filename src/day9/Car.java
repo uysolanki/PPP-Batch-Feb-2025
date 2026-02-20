@@ -7,8 +7,8 @@ public class Car {
 	private String carColor;
 	private double carPrice;
 	
-	private Tyre t1;
-	private Engine e1;
+	private Tyre t1;		//non primitve object as a data member
+	private Engine e1;		//non primitve object as a data member
 	
 	public Car() {}
 	public Car(String carModelName, String carMfgName, String carColor, double carPrice, Tyre t1, Engine e1) {

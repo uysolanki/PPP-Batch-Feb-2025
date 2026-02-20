@@ -1,9 +1,8 @@
 package day9;
 
-import java.io.IOException;
-
-public class Amitabh {
-	public void home() throws RuntimeException
+public class Amitabh 
+{
+	public void home() throws IndexOutOfBoundsException
 	{
 		System.out.println("Jalsa");
 	}

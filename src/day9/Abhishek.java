@@ -23,7 +23,7 @@ public class Abhishek extends Amitabh
 //	}
 	
 	@Override
-	public void home() throws Exception 				//parent not allowed
+	public void home() throws RuntimeException 				//parent not allowed
 	{
 		System.out.println("New Jalsa");
 	}
