@@ -13,7 +13,7 @@ public class ExceptionChainingDemo {
 		}
 		catch(Exception e1)
 		{
-			System.out.println("Message to Customer : Sorry Network is down, pls try after sometime");
+			System.out.println("Message to Customer : "+e1.getMessage());
 		}
 	}
 
@@ -36,8 +36,8 @@ public class ExceptionChainingDemo {
 		}
 		catch(NullPointerException e1)
 		{
-//			System.out.println("Message to Programmer : There is a Null Object, Pls troubleshoot");
-			e1.printStackTrace();
+			System.out.println("Message to Programmer : There is a Null Object, Pls troubleshoot");
+			//e1.printStackTrace();
 			throw new Exception("Network Down, Please try After some time");
 		}
 		
