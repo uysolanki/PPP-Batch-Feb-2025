@@ -4,17 +4,17 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class WriteFile {
+public class AppendFile {
 public static void main(String[] args) {
-	String fileName="myfolder/file3.txt";
+	String fileName="myfolder/file1.txt";
 	
 	try 
 	{
 		File file=new File(fileName);
 		if(file.exists())
 		{
-		FileWriter fw=new FileWriter(fileName);
-		fw.write(" to my channel");
+		FileWriter fw=new FileWriter(fileName,true);
+		fw.append(" my friends");
 		fw.close();
 		}
 		else
