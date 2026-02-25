@@ -4,28 +4,20 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class WriteFile {
+public class WriteFile2 {
 public static void main(String[] args) {
-	String fileName="myfolder/file3.txt";
+	String fileName="myfolder/file2.txt";
 	
 	try 
 	{
-		File file=new File(fileName);
-		if(file.exists())
-		{
 		FileWriter fw=new FileWriter(fileName);
-		fw.write("Welcome back");
+		fw.write("Welcome");
 		fw.close();
-		}
-		else
-		{
-			System.out.println("File does not exists");
-		}
 	} catch (IOException e) 
 	{
 		e.printStackTrace();
 	}
 	
-	//System.out.println("Data written to file");
+	System.out.println("Data written to file");
 }
 }
