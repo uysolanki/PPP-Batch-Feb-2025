@@ -1,1 +1,4 @@
 Welcome back to my channel my friends
+Accessing a static method using a class instance 
+(object) instead of the class name is allowed in 
+Java, but it’s considered bad practice
