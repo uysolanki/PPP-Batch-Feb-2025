@@ -6,22 +6,21 @@ import java.io.IOException;
 
 public class TryWithResources {
 public static void main(String[] args) {
-	String fileName="myfolder/file1.txt";
+	String fileName="myfolder/file98.txt";
 	
-	try 
+	try (FileWriter fw=new FileWriter(fileName,true))
 	{
 		File file=new File(fileName);
 		if(file.exists())
 		{
-		FileWriter fw=new FileWriter(fileName,true);
 		fw.append(" my friends");
-		fw.close();
 		}
 		else
 		{
 			System.out.println("File does not exists");
 		}
-	} catch (IOException e) 
+	} 
+	catch (IOException e) 
 	{
 		e.printStackTrace();
 	}

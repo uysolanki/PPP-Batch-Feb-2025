@@ -6,13 +6,13 @@ import java.io.IOException;
 
 public class WriteFile2 {
 public static void main(String[] args) {
-	String fileName="myfolder/file2.txt";
+	String fileName="myfolder/file98.txt";
 	
 	try 
 	{
 		FileWriter fw=new FileWriter(fileName);
 		fw.write("Welcome");
-		fw.close();
+//		fw.close();
 	} catch (IOException e) 
 	{
 		e.printStackTrace();
