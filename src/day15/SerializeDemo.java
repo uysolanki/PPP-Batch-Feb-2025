@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 public class SerializeDemo {
 
 	public static void main(String[] args) {
-		Student s1=new Student(18,"Virat");
+		Student s1=new Student(181,"Nitin");
 		String fileName="myfolder/file5.txt";
 		
 		try(FileOutputStream fos = new FileOutputStream(fileName);
