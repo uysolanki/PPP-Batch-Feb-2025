@@ -20,12 +20,27 @@ public class ArrayListDemo3 {
 //		Person px = a1.get(0);
 //		System.out.println("My name is " + px.getName());
 	
-		a1.add(new Person("Alice", 21, 5.10, true)); // 0
-		a1.add(new Person("Ben", 21, 5.10, true)); // 1
-		a1.add(new Person("Alice", 21, 5.10, true)); // 2
-		a1.add(new Person("Alice", 21, 5.10, true)); // 3
+		a1.add(new Person("Alice", 23, 5.10, true)); 	// 0
+		a1.add(new Person("Ben", 21, 5.10, true)); 		// 1
+		a1.add(new Person("Chris", 24, 5.10, true)); 	// 2
+		a1.add(new Person("David", 19, 5.10, true)); 	// 3
 
 		Person px = a1.get(0);
 		System.out.println("My name is " + px.getName());
+		
+		
+		int maxAge=0;
+		Person eldestPerson=null;
+		
+		for(int i=0;i<a1.size();i++)
+		{
+			if(a1.get(i).getAge() > maxAge)
+			{
+				maxAge=a1.get(i).getAge();
+				eldestPerson=a1.get(i);
+			}
+		}
+		
+		System.out.println("Eldest Employee name is "+eldestPerson.getName());
 	}
 }
