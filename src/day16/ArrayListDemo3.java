@@ -32,15 +32,49 @@ public class ArrayListDemo3 {
 		int maxAge=0;
 		Person eldestPerson=null;
 		
-		for(int i=0;i<a1.size();i++)
-		{
-			if(a1.get(i).getAge() > maxAge)
-			{
-				maxAge=a1.get(i).getAge();
-				eldestPerson=a1.get(i);
+		for(int i=0;i<a1.size();i++)				//maxAge		eldestEmp		i
+		{											//0				p1				0
+			if(a1.get(i).getAge() > maxAge)			//23							1
+			{										//24			p3				2
+				maxAge=a1.get(i).getAge();			//								3							
+				eldestPerson=a1.get(i);				//								4
 			}
 		}
 		
 		System.out.println("Eldest Employee name is "+eldestPerson.getName());
 	}
 }
+
+/*
+
+[
+  {
+    "id": 6,
+    "name": "June",
+    "age": 43,
+    "gender": "male",
+    "department": "IT",
+    "yearOfJoining": 2016,
+    "salary": 900.0,
+  },
+  {
+    "id": 5,
+    "name": "May",
+    "age": 43,
+    "gender": "female",
+    "department": "Sales",
+    "yearOfJoining": 2015,
+    "salary": 1000.0,
+  },
+  {
+    "id": 11,
+    "name": "November",
+    "age": 43,
+    "gender": "male",
+    "department": "IT",
+    "yearOfJoining": 2012,
+    "salary": 1300.0,
+  }
+ ]
+ 
+*/
