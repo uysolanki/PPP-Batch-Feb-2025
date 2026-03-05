@@ -75,6 +75,6 @@ public class ArrayListDemo3 {
     "yearOfJoining": 2012,
     "salary": 1300.0,
   }
- ]
+]
  
 */
