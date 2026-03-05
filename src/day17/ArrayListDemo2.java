@@ -16,21 +16,31 @@ public class ArrayListDemo2 {
 	rj.add("Jaipur");
 	rj.add("Bikaner");
 	rj.add("Jodhpur");
+	
+	List<String> gj=new ArrayList();		//upcasting
+	gj.add("Surat");
+	gj.add("Rajkot");
+	gj.add("Ahmedabad");
 	System.out.println(rj.size());	//3
 	
 	
 	List<List<String>> India=new ArrayList();
 	India.add(mh);
 	India.add(rj);
+	India.add(gj);
 	System.out.println(mh.size());	//6
 	
 	System.out.println(mh);
 	System.out.println(rj);
 	System.out.println(India);
 	
-	System.out.println(India.get(0).get(2));
+//	System.out.println(India.get(0).get(0));
+//	System.out.println(India.get(1).get(0));
+//	System.out.println(India.get(2).get(0));
 
-
+	
+	for(int i=0;i<India.size();i++)
+		System.out.println(India.get(i).get(0));
 	}
 
 }

@@ -17,12 +17,17 @@ public class ArrayListDemo {
 	rj.add("Bikaner");
 	rj.add("Jodhpur");
 	System.out.println(rj.size());	//3
-	
+	List<String> gj=new ArrayList();		//upcasting
+	gj.add("Surat");
+	gj.add("Rajkot");
+	gj.add("Ahmedabad");
 	
 	List<String> India=new ArrayList();
 	India.addAll(mh);
 	India.addAll(rj);
-	System.out.println(mh.size());	//6
+	India.addAll(gj);
+	
+	System.out.println(India.size());	//9
 	
 	System.out.println(mh);
 	System.out.println(rj);
@@ -30,7 +35,9 @@ public class ArrayListDemo {
 	
 	System.out.println(India.get(2));
 
-
+	
+	India.retainAll(mh);
+	System.out.println(India.size());	//3
 	}
 
 }
