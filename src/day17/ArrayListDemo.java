@@ -1,5 +1,6 @@
 package day17;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import day16.Person;
@@ -38,6 +39,8 @@ public class ArrayListDemo {
 	
 	India.retainAll(mh);
 	System.out.println(India.size());	//3
+	
+	List<String> mh1=new ArrayList(Arrays.asList("Pune","Nagpur","Nashik"));
 	}
 
 }
