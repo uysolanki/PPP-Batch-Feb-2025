@@ -7,7 +7,7 @@ import day16.Person;
 public class ArrayListDemo2 {
 
 	public static void main(String[] args) {
-	List<String> mh=new ArrayList();		//upcasting
+	List<String> mh=new ArrayList(20);		//upcasting
 	mh.add("Mumbai");
 	mh.add("Pune");
 	mh.add("Nagpur");
