@@ -33,7 +33,6 @@ public class PriorityQueueDemo {
 		System.out.println(pq.size());  //4
 		System.out.println(pq.remove()); //
 		System.out.println(pq);
-
 	}
 
 }
