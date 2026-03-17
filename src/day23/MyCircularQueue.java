@@ -5,7 +5,7 @@ public class MyCircularQueue {
 	int queue[]=new int[5];
 	int rear=-1;
 	int front=0;
-	
+	int counter=0;
 	public void display() {
 		
 			if(front>rear)
@@ -33,7 +33,7 @@ public class MyCircularQueue {
 			front=(front+1)%queue.length;
 			System.out.println(data + " is Removed");
 		}
-		
+		counter--;
 	}
 
 	public void insert(int data) {
@@ -45,11 +45,12 @@ public class MyCircularQueue {
 			queue[rear]=data;
 		}
 		
+		counter++;
 	}
 	
 	public boolean isEmpty() 
 	{
-		if((rear+1)%queue.length == front)
+		if(counter==0)
 			return true;
 		else
 			return false;
@@ -59,7 +60,7 @@ public class MyCircularQueue {
 
 	public boolean isFull() 
 	{
-		if((rear+1)%queue.length == front)
+		if(counter==queue.length)
 			return true;
 		else
 			return false;
