@@ -41,6 +41,14 @@ public class HashMapDemo2 {
 		
 		//display name of student who has come first in SY in the college  //output raj
 		System.out.println(college.get(1).get("first").getName());
+		
+		//display name of all toppers in college
+		
+		System.out.println(fyStudents.containsKey("first"));
+		
+		System.out.println("Toppers of each class");
+		for(Map<String,Student> year:college)
+			System.out.println(year.get("first").getName());
 	}
 
 }

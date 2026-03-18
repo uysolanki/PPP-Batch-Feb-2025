@@ -1,0 +1,36 @@
+{
+  "foods": 
+   {
+    "veg": 
+      {
+      "dairy": [
+	  {"prodId" : 1,"prodTitle" : "Milk",   "prodQty" : 100, "prodPrice" : 60},
+	  {"prodId" : 2,"prodTitle" : "Cheese", "prodQty" : 200, "prodPrice" : 200},
+	  {"prodId" : 3,"prodTitle" : "Butter", "prodQty" : 300, "prodPrice" : 260}
+	  ],
+      "vegetable": [
+	  {"prodId" : 4,"prodTitle" : "Brinjal",     "prodQty" : 50, "prodPrice" : 20},
+	  {"prodId" : 5,"prodTitle" : "Potato", 	 "prodQty" : 60, "prodPrice" : 30},
+	  {"prodId" : 6,"prodTitle" : "Lady Finger", "prodQty" : 70, "prodPrice" : 40}
+	  ],
+      "fruit": [
+	  {"prodId" : 7,"prodTitle" : "Apple",     "prodQty" : 80, "prodPrice" : 200},
+	  {"prodId" : 8,"prodTitle" : "Mango", 	   "prodQty" : 90, "prodPrice" : 120},
+	  {"prodId" : 9,"prodTitle" : "Banana",    "prodQty" : 100, "prodPrice" : 60}
+	  ]
+      },
+    "nonveg": 
+      {
+      "egg": [
+	  {"prodId" : 10,"prodTitle" : "Hen Eggs",     		"prodQty" : 800,  "prodPrice" : 20},
+	  {"prodId" : 11,"prodTitle" : "Duck Eggs", 	   	"prodQty" : 900,  "prodPrice" : 12},
+	  {"prodId" : 12,"prodTitle" : "Ostrich Eggs",    	"prodQty" : 1000, "prodPrice" : 6}
+	  ],
+      "meat": [
+	  {"prodId" : 13,"prodTitle" : "Chicken",     		"prodQty" : 800,  "prodPrice" : 140},
+	  {"prodId" : 14,"prodTitle" : "Mutton", 	   		"prodQty" : 900,  "prodPrice" : 800},
+	  {"prodId" : 15,"prodTitle" : "Fish",    			"prodQty" : 1000, "prodPrice" : 600}
+	  ]
+      }
+   }
+}
