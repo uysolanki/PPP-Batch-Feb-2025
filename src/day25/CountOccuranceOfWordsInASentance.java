@@ -13,9 +13,8 @@ public class CountOccuranceOfWordsInASentance {
 		Map<String,Integer> hashmap=new HashMap();
 		
 		for( String word: arr)		//word="one"
-		{
 			hashmap.put(word,hashmap.getOrDefault(word, 0)+1);
-		}
+		
 		
 		System.out.println(hashmap);
 }}
