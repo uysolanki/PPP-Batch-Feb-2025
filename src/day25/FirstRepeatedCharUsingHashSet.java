@@ -1,12 +1,12 @@
 package day25;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
-public class FirstRepeatedChar {
+public class FirstRepeatedCharUsingHashSet {
 
 	public static void main(String[] args) {
-		//String sentance="viratkohli";
+		String sentance="abba";
 		//String sentance="mahendr sijgt xyopi";
 		//String sentance="abc";
 		//String sentance="virat kohli";
@@ -15,7 +15,7 @@ public class FirstRepeatedChar {
 		//String sentance=" ";		//edge cases handle space 
 		//String sentance="   	";		//edge cases handle tab
 		//String sentance="m111ahendr1 sijgt1 xyopi";
-		String sentance="MahendrA Singh Dhoni";
+		//String sentance="MahendrA Singh Dhoni";
 		
 		Character ch=getFirstRepeatedChar(sentance);
 		if(ch==null)
@@ -30,23 +30,17 @@ public class FirstRepeatedChar {
 			if(sentance==null || sentance.length()==0)
 				return null;
 			sentance=sentance.replace("\\s+", "").toLowerCase();	//space tabs
-			Map<Character,Integer> hashmap=new HashMap();
+			Set<Character> hashset=new HashSet();
 			
 			char arr[]=sentance.toCharArray();
 			
-			for(char ch:arr)
+			for(char ch:arr)			//abba   ch='b'
 			{
-				if(Character.isDigit(ch))
-					continue;
-				
-				hashmap.put(ch, hashmap.getOrDefault(ch, 0)+1);
+				if(!hashset.add(ch))
+					return ch;			//['a','b']
 			}
 			
-			for(char ch:arr)
-			{
-				if(hashmap.get(ch)>1)
-					return ch;
-			}
+			
 			return null;
 			
 		}
