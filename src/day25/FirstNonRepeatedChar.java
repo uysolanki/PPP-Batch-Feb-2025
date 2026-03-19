@@ -3,7 +3,7 @@ package day25;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FirstRepeatedChar {
+public class FirstNonRepeatedChar {
 
 	public static void main(String[] args) {
 		//String sentance="viratkohli";
