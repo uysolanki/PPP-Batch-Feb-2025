@@ -6,7 +6,7 @@ import java.util.Map;
 public class FirstRepeatedChar {
 
 	public static void main(String[] args) {
-		//String sentance="viratkohli";
+		String sentance="abba";
 		//String sentance="mahendr sijgt xyopi";
 		//String sentance="abc";
 		//String sentance="virat kohli";
@@ -15,7 +15,7 @@ public class FirstRepeatedChar {
 		//String sentance=" ";		//edge cases handle space 
 		//String sentance="   	";		//edge cases handle tab
 		//String sentance="m111ahendr1 sijgt1 xyopi";
-		String sentance="MahendrA Singh Dhoni";
+		//String sentance="MahendrA Singh Dhoni";
 		
 		Character ch=getFirstRepeatedChar(sentance);
 		if(ch==null)
@@ -26,7 +26,7 @@ public class FirstRepeatedChar {
 }
 		public static Character getFirstRepeatedChar(String sentance)
 		{
-			
+			int loopCounter=0;
 			if(sentance==null || sentance.length()==0)
 				return null;
 			sentance=sentance.replace("\\s+", "").toLowerCase();	//space tabs
@@ -36,6 +36,7 @@ public class FirstRepeatedChar {
 			
 			for(char ch:arr)
 			{
+				loopCounter++;
 				if(Character.isDigit(ch))
 					continue;
 				
@@ -44,9 +45,15 @@ public class FirstRepeatedChar {
 			
 			for(char ch:arr)
 			{
+				loopCounter++;
 				if(hashmap.get(ch)>1)
+				{
+					System.out.println("Iteration COunt" + loopCounter);
 					return ch;
+				}
+					
 			}
+			
 			return null;
 			
 		}

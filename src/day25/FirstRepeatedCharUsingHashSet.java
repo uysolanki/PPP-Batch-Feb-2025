@@ -40,11 +40,8 @@ public class FirstRepeatedCharUsingHashSet {
 					return ch;			//['a','b']
 			}
 			
-			
-			return null;
-			
+			return null;	
 		}
-
 }
 //hashmap
 //{
