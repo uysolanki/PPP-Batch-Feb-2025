@@ -34,7 +34,7 @@ public class TreeSetDemo {
 		System.out.println(examResultPublish);
 		
 		
-		Set<Student> examSeating=new TreeSet(new NameComparator());		//Asc order of name
+		Set<Student> examSeating=new TreeSet(new NameComparator());		  //Asc order of name
 		examSeating.add(s1);
 		examSeating.add(s2);
 		examSeating.add(s3);
