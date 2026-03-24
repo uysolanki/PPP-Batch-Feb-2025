@@ -13,20 +13,21 @@ public class GroupWordsByLength {
 		Map<Integer,List<String>> hashmap=new HashMap<Integer,List<String>>();
 		
 		String words[]=sentance.split(" ");
-		System.out.println(Arrays.toString(words));
+		System.out.println("Input " +Arrays.toString(words));
 		for(String word:words)
 		{
 			int key=word.length();
 			hashmap.putIfAbsent(key, new ArrayList<String>());
 			hashmap.get(key).add(word);
 		}
+		
+		System.out.println("Output " +hashmap.values());
 	}
 }
 
-/*		//word="three"		key=5
-{
-3 : [one,two]
-5 : [three]							
+/*		//word="two"		key=3
+{	
+3,["one","two"]					
 }									
 */
 
