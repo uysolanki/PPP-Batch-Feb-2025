@@ -20,10 +20,7 @@ public class GroupWordsByLength {
 			hashmap.putIfAbsent(key, new ArrayList<String>());
 			hashmap.get(key).add(word);
 		}
-		
-		
 	}
-
 }
 
 /*		//word="three"		key=5
