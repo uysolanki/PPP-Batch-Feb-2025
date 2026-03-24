@@ -1,6 +1,6 @@
-package day26;
+package day27;
 
-public class Student implements Cloneable
+public class Student implements Cloneable,Comparable<Student>
 {
 	private int rno;
 	private String name;
@@ -36,5 +36,31 @@ public class Student implements Cloneable
 	@Override
 	protected Student clone() throws CloneNotSupportedException {
 		return (Student)super.clone();
+	}
+	
+//	@Override
+//	public int compareTo(Student s1) {
+//		if(this.getRno()>s1.getRno())
+//			return 1;
+//		else if(this.getRno()<s1.getRno())
+//			return -1;
+//		else
+//			return 0;
+//	}
+	
+	
+//	@Override
+//	public int compareTo(Student s1) {
+//		if(this.getPer()>s1.getPer())
+//			return -1;
+//		else if(this.getPer()<s1.getPer())
+//			return 1;
+//		else
+//			return 0;
+//	}
+	
+	@Override
+	public int compareTo(Student s1) {
+		return this.getName().compareTo(s1.getName());
 	}
 }

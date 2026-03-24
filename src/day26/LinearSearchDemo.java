@@ -1,7 +1,6 @@
 package day26;
 
 public class LinearSearchDemo {
-
 	public static void main(String[] args) {
 				//  i
 		int arr[]= {8,2,9,3,5};
