@@ -1,12 +1,8 @@
 package day28;
 
-public class Alpha extends Thread
+public class Alpha implements Runnable
 {
 	
-	public Alpha(String threadName)
-	{
-		super(threadName);
-	}
 @Override
 public void run() {
 	System.out.println(Thread.currentThread().getName());

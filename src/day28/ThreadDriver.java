@@ -4,19 +4,20 @@ public class ThreadDriver {
 
 	public static void main(String[] args) {
 		System.out.println(Thread.currentThread().getName());
-		Alpha thread1 = new Alpha("Thread-Nitin");
+		Alpha thread1 = new Alpha();
 		Numeric thread2 = new Numeric("Thread-Vedant");
 
-		thread1.start();
+		Thread tx=new Thread(thread1,"Thread-Nitin");
+		tx.start();
 		thread2.start();
 
-		System.out.println("Thread Priority of Thread-Nitin " + thread1.getPriority());
+		System.out.println("Thread Priority of Thread-Nitin " + tx.getPriority());
 		System.out.println("Thread Priority of Vedant-Nitin " + thread2.getPriority());
 		
-		thread1.setPriority(10);
+		tx.setPriority(10);
 		thread2.setPriority(10);
 		
-		System.out.println("Thread Priority of Thread-Nitin " + thread1.getPriority());
+		System.out.println("Thread Priority of Thread-Nitin " + tx.getPriority());
 		System.out.println("Thread Priority of Vedant-Nitin " + thread2.getPriority());
 	}
 
