@@ -5,17 +5,17 @@ import java.util.Arrays;
 public class ArraySortRotateSearch {
 public static void main(String[] args) {
 	
-	int arr[]= {8,2,3,7,6,9};
+	int arr[]= {8,2,3,7,6,9,5};
 	System.out.println("Array Before Sorting" + Arrays.toString(arr));
 	bubbleSort(arr);
 	System.out.println("Array After Sorting" + Arrays.toString(arr));
 	
-	int mid=arr.length/2;
-	
+	int mid=(int)Math.round((double)arr.length/2);
+	System.out.println(mid);
 	arrayLeftRotate(arr,mid);
 	System.out.println("Array After Left Rotate on Mid" + Arrays.toString(arr));
 	
-	int search=19;
+	int search=9;
 	int index=arraySearch(arr,search,mid);
 	System.out.println(index==-1?"NOT FOUND ": "FOUND AT INDEX "+index+", ["+arr[index]+"]");
 }
@@ -23,6 +23,7 @@ public static void main(String[] args) {
 
 
 private static int arraySearch(int[] arr, int search,int mid) {
+	
 	
 	if(search<arr[0])
 	{
