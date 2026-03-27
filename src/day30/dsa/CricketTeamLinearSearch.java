@@ -1,6 +1,6 @@
 package day30.dsa;
 
-public class CricketTeam {
+public class CricketTeamLinearSearch {
 
 	public static void main(String[] args) {
 		int players[]= {100,80,60,40};
@@ -20,7 +20,6 @@ public class CricketTeam {
 				{
 					avlPlayers+=Math.min(players[i], possibleNumberOfTeams);  //28
 				}
-				
 				if(avlPlayers<totalPlayersNeeeded)
 				{
 					return possibleNumberOfTeams-1;
