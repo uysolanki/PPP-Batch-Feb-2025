@@ -1,8 +1,7 @@
 package day30.threadpooling;
 
-public class Four extends Thread
-{
-	
+public class Four implements Runnable
+{	
 @Override
 public void run() 
 {
