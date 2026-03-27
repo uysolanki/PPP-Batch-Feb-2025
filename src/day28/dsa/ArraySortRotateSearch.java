@@ -15,7 +15,7 @@ public static void main(String[] args) {
 	arrayLeftRotate(arr,mid);
 	System.out.println("Array After Left Rotate on Mid" + Arrays.toString(arr));
 	
-	int search=9;
+	int search=7;
 	int index=arraySearch(arr,search,mid);
 	System.out.println(index==-1?"NOT FOUND ": "FOUND AT INDEX "+index+", ["+arr[index]+"]");
 }
