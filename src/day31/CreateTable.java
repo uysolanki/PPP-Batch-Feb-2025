@@ -2,6 +2,7 @@ package day31;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class CreateTable {
 
@@ -11,8 +12,21 @@ public class CreateTable {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pppdb", "root", "");
 		
-		System.out.println(con.isClosed());
-
+		Statement st=con.createStatement();
+		
+		String query="create table emp(\r\n"
+				+ "eno int(5) primary key,\r\n"
+				+ "ename varchar(10) not null,\r\n"
+				+ "salary numeric(6,2))";
+		
+		//Statement st=con.createStatement();
+		
+		st.execute(query);
+		
+		System.out.println("Table created");
+		st.close();
+		con.close();
+		
 	}
 
 }
