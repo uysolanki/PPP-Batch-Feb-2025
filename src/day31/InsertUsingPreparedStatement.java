@@ -35,6 +35,8 @@ public class InsertUsingPreparedStatement {
 		
 		if(rows>0)
 			System.out.println(rows + " Records Inserted");
+		
+		ps.close();
 	}
 	catch(Exception ex1) {
 		ex1.printStackTrace();
