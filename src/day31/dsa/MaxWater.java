@@ -3,7 +3,7 @@ package day31.dsa;
 public class MaxWater {
 
 	public static void main(String[] args) {
-		int wallHeights[] = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+		int wallHeights[] = { 1, 8, 9, 2, 5, 8 };
 		int maxWater = calculateMaxWater(wallHeights);
 		System.out.println(maxWater);
 	}
