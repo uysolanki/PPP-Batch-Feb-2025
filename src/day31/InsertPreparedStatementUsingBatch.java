@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class InsertUsingPreparedStatement {
+public class InsertPreparedStatementUsingBatch {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		Class.forName("com.mysql.jdbc.Driver");
@@ -14,7 +14,10 @@ public class InsertUsingPreparedStatement {
 				PreparedStatement ps = con.prepareStatement("insert into emp values(?,?,?)");) 
 		{
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter emp number");
+			
+			for(int i=1;i<=3;i++)
+			{
+			System.out.println("Enter emp number"); //109-113
 			int a = sc.nextInt();
 
 			System.out.println("Enter emp name");
@@ -26,11 +29,12 @@ public class InsertUsingPreparedStatement {
 			ps.setInt(1, a);
 			ps.setString(2, b);
 			ps.setDouble(3, c);
+			ps.addBatch();
+			}
+			
+			int rows[] = ps.executeBatch();
 
-			int rows = ps.executeUpdate();
-
-			if (rows > 0)
-				System.out.println(rows + " Records Inserted");
+			System.out.println(rows.length + " Records Inserted");
 		} 
 		catch (Exception ex1) 
 		{
