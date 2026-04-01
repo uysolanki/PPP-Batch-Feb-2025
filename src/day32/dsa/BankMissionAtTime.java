@@ -5,15 +5,14 @@ import java.util.Arrays;
 public class BankMissionAtTime {
 
 	public static void main(String[] args) {
-		int shiftTimings[] = { 0, 3, 5, 6, 8, 11 };
-		//int shiftTimings[] = { 0, 3, 3, 6, 7, 12 };
-		int bankClosingHours = 12;
+		//int shiftTimings[] = { 0, 3, 5, 6, 8, 11 };
+		int shiftTimings[] = { 0, 1, 2, 5, 6, 7, 7, 10};
+		int bankClosingHours = 10;
 		int robbingTime = 3;
 		int numberOfGaurds = shiftTimings.length / 2;
 		int result=mission(shiftTimings,bankClosingHours,robbingTime);
 		System.out.println(result==-1?"Mission Impossible":"Mission completed at " + result + "pm");
 	}
-
 	
 	private static int mission(int[] shiftTimings, int bankClosingHours, int robbingTime) {
 		
