@@ -21,6 +21,7 @@ public class HikariDBConnectionPPP {
 	        config.setIdleTimeout(30000);
 	        config.setConnectionTimeout(30000);
 	        config.setMaxLifetime(1800000);
+	        config.setLeakDetectionThreshold(5000);
 
 	        dataSource = new HikariDataSource(config);
 	}
