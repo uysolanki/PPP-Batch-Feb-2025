@@ -3,12 +3,25 @@ package day31;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
 public class InsertPreparedStatementUsingBatch {
 
-	public static void main(String[] args) throws ClassNotFoundException {
+	public static void main(String[] args)  throws ClassNotFoundException, SQLException
+	{
+		try
+		{
+		insertBatch();
+		}
+		catch(MyException ex1)
+		{
+			System.out.println("Message to Customer "+ex1.getMessage());
+		}
+	}
+
+	private static void insertBatch() throws ClassNotFoundException, SQLException{
 		Class.forName("com.mysql.jdbc.Driver");
 		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pppdb", "root", "");
 				PreparedStatement ps = con.prepareStatement("insert into emp values(?,?,?)");
@@ -36,13 +49,11 @@ public class InsertPreparedStatementUsingBatch {
 				con.commit();
 
 				System.out.println(rows.length + " Records Inserted");
-			} catch (Exception ex1) {
+			} catch (SQLException ex1) {
 				con.rollback();
-				System.out.println("Transaction rolled back!");
-				ex1.printStackTrace();
+				System.out.println("Log :" +ex1.getMessage());
+				throw new MyException("Transaction rolled back!");
 			}
-		} catch (Exception ex1) {
-			ex1.printStackTrace();
-		}
+		} 		
 	}
 }
