@@ -1,4 +1,4 @@
-package day31;
+package day32;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,10 +11,10 @@ public class CreateTable {
 		//Class.forName("com.mysql.cj.jdbc.Driver"); //workbench
 //		Class.forName("com.mysql.jdbc.Driver");
 //		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pppdb", "root", "");
-		Connection con=MySQLDBConnectionPPP.getDBConnection();
+		Connection con=HikariDBConnectionPPP.getConnection();
 		Statement st=con.createStatement();
 		
-		String query="create table emp2(\r\n"
+		String query="create table emp3(\r\n"
 				+ "eno int(5) primary key,\r\n"
 				+ "ename varchar(10) not null,\r\n"
 				+ "salary numeric(6,2))";
