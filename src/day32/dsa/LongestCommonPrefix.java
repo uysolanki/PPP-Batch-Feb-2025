@@ -11,7 +11,7 @@ public class LongestCommonPrefix {
 	}
 
 	private static String findLongestCommonPrefix(String[] strs) {
-		String prefix = strs[0]; //FLOW
+		String prefix = strs[0]; //FLOWERS
 
         for (int i = 1; i < strs.length; i++) {
 
