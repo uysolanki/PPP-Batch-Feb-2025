@@ -13,4 +13,9 @@ public class CricketTurf implements Turf
 		return "Cricket Turf";
 	}
 
+	@Override
+	public String getCompanayName() {
+		return "VK Velocity";
+	}
+
 }

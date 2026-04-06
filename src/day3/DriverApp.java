@@ -28,12 +28,14 @@ public static void main(String[] args) {
 	
 	Turf turf=TurfMananger.getTurf(turfChoice);
 	
-	System.out.println(turf.getCompanyName());
+	System.out.println("Company Name "+turf.getCompanayName());
 	System.out.println("Customer Name "+customerName);
 	System.out.println("Date Of Play "+dateOfPlay);
 	System.out.println("Time Of Play "+timeOfPlay);
 	System.out.println("Turf "+turf.getTurfName());
 	System.out.println("Price "+turf.getTurfPrice());
+	
+	System.out.println("You can also book online on "+Turf.getwebSiteName());
 	
 }
 }
