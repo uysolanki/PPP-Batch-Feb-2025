@@ -10,7 +10,7 @@ public class WithPoolDriver {
 		ExecutorService executor=Executors.newFixedThreadPool(2); //degree of //el ism is 2
 		
 		
-		executor.submit(new One());
+		executor.submit(new One().join());
 		executor.submit(new Two());
 		executor.submit(new Three());
 		executor.submit(new Four());
