@@ -106,7 +106,9 @@ public class FunctionStyle {
 		
 		List<Integer> numbers9 = new ArrayList(Arrays.asList(19,11,12,16,2));		//true
 		Optional<Integer> n5=numbers9.stream().filter(n1->n1%3==0).findFirst();
-		System.out.println(n5.get());
+		System.out.println(n5.orElse(0));
+		
+		double areas=java.lang.Math.PI*5*5;
 	}
 
 }
