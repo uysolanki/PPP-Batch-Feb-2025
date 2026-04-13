@@ -80,3 +80,17 @@ public class SinglyLinkedListDemo {
 	}
 
 }
+
+
+/*
+Problem: Organizing Customer Orders by Price
+
+A small online store records customer orders as they come in. 
+Each order has a price, and orders are stored in the sequence they are received using a singly linked list.
+
+However, at the end of the day, the store manager wants to analyze orders in ascending order of price to:
+
+Identify cheapest orders
+Offer discounts on low-value orders
+Generate reports
+*/
