@@ -3,15 +3,27 @@ package day38.dsa;
 import java.util.Scanner;
 
 public class SinglyLinkedListDemo {
-
+	static class Node {
+		int data;
+		Node next;
+		
+		public Node(int data) {
+			this.data = data;
+			this.next = null;
+		}
+		
+}
 	public static void main(String[] args) {
+		
+		 try(Scanner sc=new Scanner(System.in))
+		 {
 		 Node start1=null;
 		 Node start2=null;
-		 start1=createList(start1);
+		 start1=createList(start1,sc);
 		 display(start1);
 		 sortList(start1);
 		 display(start1);
-		 start2=createList(start2);
+		 start2=createList(start2,sc);
 		 display(start2);
 		 sortList(start2);
 		 display(start2);
@@ -19,9 +31,13 @@ public class SinglyLinkedListDemo {
 		 start1= mergeList(start1,start2);
 		 sortList(start1);
 		 display(start1);
+		 }
 	}
 
 	private static Node mergeList(Node start1, Node start2) {
+		if(start1==null) return start2;
+		if(start2==null) return start1;
+		
 		Node temp=start1;
 		while(temp.next!=null)
 			temp=temp.next;
@@ -57,8 +73,8 @@ public class SinglyLinkedListDemo {
 		System.out.println("NULL");
 	}
 
-	private static Node createList(Node start) {
-		Scanner sc=new Scanner(System.in);
+	private static Node createList(Node start,Scanner sc) {
+		
 		System.err.println("Enter size of Linked List");
 		int size=sc.nextInt();
 		Node temp=null;
