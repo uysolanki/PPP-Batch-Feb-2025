@@ -1,6 +1,7 @@
 package day39;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -47,11 +48,22 @@ public class StreamAPI4 {
        products.stream().map(Product::getTitle).map(title->title.length()).forEach(System.out::println);
        System.out.println("***");
        StreamAPI4 obj=new StreamAPI4();
-       products.stream().map(Product::getTitle).map(obj::test).forEach(System.out::println);
-    }
+     
+       //display price of max jewelery
+       double maxPriceOfJewelry=products.stream().filter((prod)->prod.getCategory().equals("jewelery")).mapToDouble(prod->prod.getPrice()).max().orElse(0.0);
+       System.out.println(maxPriceOfJewelry);
+       
+       System.out.println("$$$$");
+       System.out.println(products.stream().filter((prod)->prod.getCategory().equals("jewelery")).sorted().limit(1).toList());
+	}
 
+	public void hello()
+	{ 	
+		 List<Product> products=new ArrayList();
+		 products.stream().map(Product::getTitle).map(StreamAPI4::test).forEach(System.out::println);
+	}
 	
-	public int test(String str)
+	public static int test(String str)
 	{
 		return str.length();
 	}

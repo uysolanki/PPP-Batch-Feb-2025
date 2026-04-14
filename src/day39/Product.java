@@ -1,6 +1,6 @@
 package day39;
 
-public class Product {
+public class Product implements Comparable<Product>{
 
 	    private int id;
 	    private String title;
@@ -67,6 +67,16 @@ public class Product {
 		public String toString() {
 			return "Product [id=" + id + ", title=" + title + ", price=" + price + ", description=" + description
 					+ ", category=" + category + ", image=" + image + ", rating=" + rating + "]";
+		}
+		@Override
+		public int compareTo(Product o) {
+			if(this.price>o.getPrice())
+				return -1;
+			else if(this.price<o.getPrice())
+				return 1;
+			else
+				return 0;
+				
 		}
 	
 	    
