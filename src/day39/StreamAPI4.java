@@ -2,6 +2,7 @@ package day39;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -54,7 +55,36 @@ public class StreamAPI4 {
        System.out.println(maxPriceOfJewelry);
        
        System.out.println("$$$$");
-       System.out.println(products.stream().filter((prod)->prod.getCategory().equals("jewelery")).sorted().limit(1).toList());
+       System.out.println(products.stream().filter((prod)->prod.getCategory().equals("jewelery")).sorted((p1,p2)->{
+    	   if(p1.getPrice()>p2.getPrice())
+				return -1;
+			else if(p1.getPrice()<p2.getPrice())
+				return 1;
+			else
+				return 0;
+       }).limit(1).toList());
+       
+       
+       System.out.println("####");
+       System.out.println(products.stream().filter((prod)->prod.getCategory().equals("jewelery")).sorted((p1,p2)->{
+    	   if(p1.getPrice()>p2.getPrice())
+				return -1;
+			else if(p1.getPrice()<p2.getPrice())
+				return 1;
+			else
+				return 0;
+       }).limit(1).map(prod->prod.getPrice()).toList());
+       
+       
+       System.out.println("####&&&&");
+       System.out.println(products.stream().filter((prod)->prod.getCategory().equals("jewelery")).sorted((p1,p2)->{
+    	   if(p1.getPrice()>p2.getPrice())
+				return -1;
+			else if(p1.getPrice()<p2.getPrice())
+				return 1;
+			else
+				return 0;
+       }).limit(1).map(prod->prod.getPrice()).findFirst().get());
 	}
 
 	public void hello()
@@ -67,4 +97,6 @@ public class StreamAPI4 {
 	{
 		return str.length();
 	}
+	
+	
 }
