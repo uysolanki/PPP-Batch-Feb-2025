@@ -24,7 +24,6 @@ public class GroupByAnagrams {
 			hashmap.get(key).add(word);
 			 
 		}
-		
 			System.out.println(hashmap.values());
 	}
 

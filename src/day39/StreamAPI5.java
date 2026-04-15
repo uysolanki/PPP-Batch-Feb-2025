@@ -40,7 +40,34 @@ public class StreamAPI5 {
 		
 		Map<Boolean,List<String>> partitionByLenGtThan3=words1.stream().collect(Collectors.partitioningBy(str->str.length()>3));
 		System.out.println(partitionByLenGtThan3);
-	
+		
+		Map<Boolean,Long> partitionByLenGtThan3count=words1.stream().collect(Collectors.partitioningBy(str->str.length()>3,Collectors.counting()));
+		System.out.println(partitionByLenGtThan3count);
+		
+		
+		//group by length show values in upper case list
+		Map<Integer,List<String>> groupbyLengthUCase= words.stream().collect(Collectors.groupingBy(word->word.length(),Collectors.mapping(s->s.toUpperCase(), Collectors.toList())));
+		System.out.println(groupbyLengthUCase);
+		
+		//group by length show count of each length
+		Map<Integer,Long> groupbyLengthCount= words.stream().collect(Collectors.groupingBy(s->s.length(),Collectors.counting()));
+		System.out.println(groupbyLengthCount);
+		
+		
+		//List<String> words2=new ArrayList(Arrays.asList("one","two","two","three","three","three","four"));
+		List<String> words2=new ArrayList(Arrays.asList("one","two","two","two","three","three","three","four","two"));
+		
+		Map<String,Long> wordCount=words2.stream().collect(Collectors.groupingBy(s->s,Collectors.counting()));
+		System.out.println(wordCount);
+		
+		
+		//find max occuring String
+		String maxOccuranceString=wordCount.entrySet().stream()
+		.max(Map.Entry.comparingByValue())
+		.map(Map.Entry::getKey)
+		.orElse(null);
+		
+		System.out.println(maxOccuranceString);
 	}
 	
 	
